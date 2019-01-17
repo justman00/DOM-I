@@ -109,3 +109,20 @@ contact.forEach((el, i) => {
 
 const footer = document.querySelector("footer p");
 footer.textContent = siteContent.footer.copyright;
+
+const btn = document.querySelector("button");
+btn.style.outline = "none";
+btn.onclick = changeEverything;
+
+function changeEverything(e) {
+  const x = document.querySelector("html").style;
+
+  if (x.color === "black" || x.color == "") {
+    x.color = "white";
+    x.backgroundColor = "black";
+    logo.style.backgroundColor = "white";
+  } else {
+    x.color = "black";
+    x.backgroundColor = "white";
+  }
+}
